@@ -1,0 +1,63 @@
+.section-about{
+    font-family: "Jost";
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: var(--dark-blue);
+}
+.section-about  .main-title{
+    color:var(--floral-white);
+    font-size: 4rem;
+    text-align: start;
+    padding-bottom: .5rem;
+}
+
+.section-about .container{
+    display: flex;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
+    
+}   
+
+.section-about .card-profile{
+    border-radius: 50%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color:rgb(43, 41, 89);
+    transition: 600ms ease-in;
+}
+
+.section-about .card-profile::after{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color:#ffbd43dc ;
+    border-radius: 50%;
+    transform: translate(-300px,0px);
+}
+.section-about .card-profile img{
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-about .sobre{
+    transition: 600ms ease-in;
+}
+
+
+.section-about .description{
+    max-width: 500px;
+    color: var(--floral-white);
+    font-weight: 500;
+    letter-spacing: 1.1%;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
