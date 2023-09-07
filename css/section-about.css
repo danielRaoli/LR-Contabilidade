@@ -82,3 +82,21 @@
         margin: 0 10px 0 10px;
     }
 }
+
+@media (max-width:600px) {
+
+    .section-about .card-profile img{
+        height: 400px;
+    }
+
+    .section-about .card-profile::after{
+        width: 300px;
+        height: 300px;
+        transform: translate(-225px,0px);
+    }
+
+    .section-about .card-profile{
+        width: 300px;
+        height: 300px;
+    }
+}
