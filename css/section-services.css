@@ -61,3 +61,11 @@
     color: var(--dark-blue);
     padding-bottom: 1rem;
 }
+
+@media (max-width: 999px) {
+    .section-services .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

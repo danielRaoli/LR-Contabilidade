@@ -61,3 +61,24 @@
     line-height: 1.5rem;
     font-size: 1rem;
 }
+
+@media (max-width: 999px) {
+    .section-about .container {
+        flex-direction: column;
+    }
+
+    .container .card-profile {
+        width: 375px;
+        height: 380px;
+    }
+
+    .container .sobre h3 {
+        font-size: 40px;
+        margin: 0 10px 0 10px;
+    }
+
+    .sobre .description {
+        text-align: justify;
+        margin: 0 10px 0 10px;
+    }
+}

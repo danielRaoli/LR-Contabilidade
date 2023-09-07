@@ -1,169 +1,212 @@
-
-
-*{
-    font-family:'Jost';
-    text-decoration: none;
+* {
+  font-family: "Jost";
+  text-decoration: none;
 }
 
 body,
-html{
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-main{
-    height: auto;
-    width: 100vw;
-    box-sizing: border-box;
+main {
+  height: auto;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
-.main-header{
-    display: flex;
+.main-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.main-header .menu {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 5rem;
+  align-items: center;
+  position: absolute;
+}
+
+.main-header .action-link {
+  color: var(--dourado);
+  font-size: 2rem;
+  position: relative;
+}
+
+.main-header .action-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--dourado);
+  transition: 600ms ease-in-out;
+}
+
+.main-header .action-link:hover::after {
+  width: 100%;
+}
+
+.main-header .menu > .logo {
+  height: 50px;
+}
+
+.banner {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/images/contabilidade-4.0.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-color: #15102ce0;
+  background-blend-mode: darken;
+  min-height: 600px;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+}
+
+.banner > .logo {
+  height: 500px;
+}
+
+.banner .profile {
+  height: 400px;
+  display: flex;
+  position: relative;
+}
+
+.banner .profile::before {
+  content: "";
+  height: 300px;
+  width: 250px;
+  background: var(--dourado);
+  display: block;
+}
+
+.banner .apresentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  position: relative;
+  transform: translateY(-45px);
+}
+
+.apresentation .main-title {
+  font-size: 60px;
+  color: var(--dourado);
+  padding-bottom: 3rem;
+}
+
+.slogan {
+  display: flex;
+  max-width: 600px;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.slogan .description {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: antiquewhite;
+}
+
+.banner .main-title::after {
+  content: "";
+  width: 415px;
+  height: 3px;
+  display: block;
+  background-color: var(--dourado);
+  position: absolute;
+  transform: translateY(20px);
+}
+
+.sub-title {
+  font-size: 30px;
+  color: var(--dourado);
+}
+
+.title {
+  font-size: 4rem;
+  text-align: start;
+  color: var(--dourado);
+  letter-spacing: 1px;
+}
+
+[data-anime] {
+  opacity: 0;
+}
+
+[data-anime="left"] {
+  transform: translate(-50px, 0);
+}
+
+[data-anime="right"] {
+  transform: translate(50px, 0);
+}
+
+[data-anime="center"] {
+  transform: translate(0px, -50px);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (max-width: 999px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    position: relative;
-}
-.main-header .menu{
-    display: flex;
-    gap: 1.5rem;
-    padding: 1rem 5rem;
-    align-items: center;
-    position: absolute;
+    padding-left: 30px;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
 
+  .main-header img {
+    display: none;
+  }
 
-}
+  .menu .action-link {
+    font-size: 24px;
+  }
 
-.main-header  .action-link{
-    color: var(--dourado);
-    font-size: 2rem;
-    position: relative;
-}
-
-.main-header  .action-link::after{
-    content: '';
-    display: block;
-    width: 0%;
-    height: 2px;
-    background-color: var(--dourado);
-    transition: 600ms ease-in-out;
-}
-
-.main-header  .action-link:hover::after{
-    width: 100%;
-}
-
-
-.main-header .menu > .logo{
-    height: 50px;
-}
-
-.banner{
-    padding-top: 3rem;
-    display: flex;
-    align-items: center;
-    background-image: url(../assets/images/contabilidade-4.0.jpg);
-    background-size: cover;
-    background-position:fixed ;
-    background-color:#15102ce0;
-    background-blend-mode: darken;
-    min-height: 600px;
-    justify-content: space-evenly;
-    padding-left: 5rem;
-}
-
-.banner > .logo{
-    height: 500px;
-    
-}
-
-.banner .profile{
-    height: 400px;
-    display: flex;
-    position: relative;
-}
-
-.banner .profile::before{
-    content: '';
-    height:300px ;
-    width:250px ;
-    background: var(--dourado);
-    display: block;
-}
-
-.banner .apresentation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 450px;
-    position: relative;
-    transform: translateY(-45px);
-}
-
-
-.apresentation .main-title{
-    font-size: 60px;
-    color: var(--dourado);
-    padding-bottom: 3rem;
-
-}
-
- .slogan{
-    display: flex;
-    max-width: 600px;
-    gap: 1rem;
-    flex-direction: column;
-
-}
-
-.slogan .description{
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    color: antiquewhite;
-}
-
-.banner .main-title::after{
-    content: '';
-    width: 415px;
+  .banner .main-title::after {
+    content: "";
+    width: 210px;
     height: 3px;
     display: block;
     background-color: var(--dourado);
     position: absolute;
     transform: translateY(20px);
+  }
 
-}
+  .banner .slogan {
+    padding-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-.sub-title{
+  .slogan .title {
     font-size: 30px;
-    color: var(--dourado);
-}
+  }
 
-.title{
-    font-size: 4rem;
-    text-align:start;
-    color: var(--dourado);
-    letter-spacing: 1px;
-}
+  .slogan .description {
+    font-size: 20px;
+  }
 
+  .apresentation .logo {
+    width: 150px;
+  }
 
-[data-anime]{
-    opacity: 0;
-}
+  .apresentation .main-title {
+    font-size: 30px;
+  }
 
-[data-anime="left"]{
-    transform: translate(-50px,0);
-}
-
-[data-anime="right"]{
-    transform: translate(50px,0);
-}
-
-[data-anime="center"]{
-   transform: translate(0px,-50px); 
-}
-
-[data-anime].animate{
-    opacity: 1;
-    transform: translate(0,0);
+  .apresentation .sub-title {
+    font-size: 20px;
+  }
 }
