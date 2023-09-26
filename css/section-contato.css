@@ -40,25 +40,31 @@
 
 .section-contato form input {
   height: 40px;
+  border-radius: 8px;
 }
+
+
 
 .section-contato form textarea {
   max-width: 360px;
   max-height: 100px;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .section-contato .container img {
   height: 450px;
 }
 
-.container .main-button {
-  border-radius: 20px;
+.right .main-button {
+  border-radius: 10px;
   height: 40px;
   transition: 500ms ease-in-out;
+  width: auto;
+  border: none;
 }
 
-.container .main-button:hover {
+.right .main-button:hover {
   border: 2px solid #e3e3e3;
   color: var(--dourado);
   background-color: #e3e3e300;
@@ -66,19 +72,37 @@
 }
 
 @media (max-width: 999px) {
-    .section-contato .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
     .container .right h3 {
        font-size: 30px;
        text-align: center;
     }
 
-    .container img {
-        width: 250px;
+   .section-contato .container img {
+        display: none;
     }
+}
+
+
+@media (max-width: 480px){
+  .section-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: auto;
+    box-sizing: border-box;
+  }
+  
+  .section-contato form input {
+    height: 40px;
+    max-width: 250px;
+    box-sizing: border-box;
+  }
+  
+  .section-contato form textarea {
+    max-width: 250px;
+    max-height: 100px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
