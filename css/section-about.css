@@ -65,6 +65,7 @@
 @media (max-width: 999px) {
     .section-about .container {
         flex-direction: column;
+        padding: 0 1rem;
     }
 
     .container .card-profile {
